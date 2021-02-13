@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nick Luciw</title>
+    <style>
+      html {
+        padding: 0;
+        margin: 0;
+        background: rgb(245, 245, 245);
+        color: rgb(34, 34, 34);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        background-image: url(blurbs.svg);
+        min-height: 100vh;
+        /* min-width: 100vw; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* cursor: url(bug.png), auto; */
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      img:hover {
+        animation: spin 1s linear infinite;
+      }
+
+      .container {
+        background: linear-gradient(
+          180deg,
+          rgb(255, 255, 255),
+          rgb(255, 255, 255)
+        );
+        position: relative;
+        padding: 10px 50px;
+        margin: 0 auto;
+        width: 800px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      .container::after {
+        border-radius: 20px;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        /* border-radius: 5px; */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        transition: opacity 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      }
+      .container:hover::after {
+        opacity: 1;
+      }
+      .container h1 {
+        color: rgb(88, 88, 247);
+        font-size: 50px;
+      }
+      .container a {
+        padding: 15px 25px;
+        margin-bottom: 20px;
+        border-radius: 40px;
+        color: white;
+        background: rgb(88, 88, 247);
+        border: solid 2px rgb(88, 88, 247);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+      }
+      .container a:hover {
+        color: rgb(88, 88, 247);
+        background: white;
+      }
+      @media (max-width: 1000px) {
+        body {
+          padding: 0 100px;
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 20px 25px;
+        }
+        .container h1 {
+          font-size: 42px;
+        }
+        .container {
+          font-size: 12px;
+          padding: 4px 25px;
+        }
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Nick Luciw</h1>
+      <img src="./nick.svg" alt="" srcset="" width="200" />
+      <p>
+        Hello! I am a PhD Candidate in the Department of Medical Biophysics at
+        the University of Toronto, supervised by Dr. Bradley MacIntosh at
+        Sunnybrook Research Institute.
+      </p>
+      <p>
+        I specialize in analysis methods for mapping blood flow using MRI. My
+        main focuses are: 1) deep learning methods to enable rapid generation of
+        images of brain physiology; 2) multivariate statistics to study cerebral
+        blood flow in individuals with and without neurological and psychiatric
+        disease. For more info and links to my work, see the Research page.
+      </p>
+      <p>
+        I am also an active member of the Medical Biophysics and Faculty of
+        Medicine communities, where I’ve served as President of our Graduate
+        Student Association and Communications Director of the Faculty of
+        Medicine Graduate Representation Committee. In the latter role, we
+        negotiated a much-needed 10% stipend increase for all graduate students
+        (>1800) in the Faculty of Medicine at UofT for the 2021/22 academic
+        year. For more info, see Volunteer page.
+      </p>
+      <p>
+        Previously, I received an MSc from the Department of Physics at UofT and
+        a BSc in Theoretical Physics from the University of Guelph.
+      </p>
+      <a href="https://nluciw.github.io/files/cv.pdf" target="_blank">RESUME</a>
+    </div>
+  </body>
+</html>
